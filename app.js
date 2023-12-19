@@ -1,5 +1,5 @@
 import colors from "colors";
-import { showMenu, pause } from "./helpers/messages.js";
+import {inquirerMenu, inquirerPause} from "./helpers/inquirer.js"
 
 console.clear();
 
@@ -9,8 +9,8 @@ const main = async () => {
 
     do {
         
-        opt = await showMenu();
-        if (opt !== '0') await pause();
+        opt = await inquirerMenu();
+        await inquirerPause();
 
     } while (opt !== '0')
     
